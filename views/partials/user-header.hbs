@@ -1,0 +1,46 @@
+<header>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">MY Shopee</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/">Products</a>
+          <a class="nav-link position-relative" href="/cart">Cart
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">{{cartCount}}</span>
+          </a>
+          {{#if user}}
+          <a class="nav-link" href="#">Orders</a>
+          {{/if}}
+        </div>
+      </div>
+
+      <!-- Example split primary button -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary">
+          {{#if user}}
+          {{user.name}}
+          {{else}}
+          Account
+          {{/if}}
+        </button>
+        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-mdb-toggle="dropdown"
+          aria-expanded="false">
+          <span class="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu">
+          {{# if user}}
+          <li><a class="dropdown-item" href="/logout">Log-Out</a></li>
+          {{else}}
+          <li><a class="dropdown-item" href="/login">Log-In</a></li>
+          <li><a class="dropdown-item" href="/signup">Sign-Up</a></li>
+          {{/if}}
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>

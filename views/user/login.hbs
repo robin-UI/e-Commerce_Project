@@ -1,0 +1,97 @@
+
+
+<div class="container p-4 mt-3 card" style="width: 500px;">
+    <form action="/login" method="POST">
+
+        {{#if loginErr}}
+            <p class="error p-2 mb-3 bg-danger bg-gradient text-white rounded-5">Invalid user name or password</p>
+        {{/if}}
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <input type="email" id="form1Example1" class="form-control" name="emale" />
+            <label class="form-label" for="form1Example1">Email address</label>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+            <input type="password" id="form1Example2" class="form-control" name="Password" />
+            <label class="form-label" for="form1Example2">Password</label>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+
+        <div class="text-center">
+            <p>Not a member? <a href="/signup">Register</a></p>
+            <p>or sign up with:</p>
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+                <i class="fab fa-facebook-f"></i>
+            </button>
+
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+                <i class="fab fa-google"></i>
+            </button>
+
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+                <i class="fab fa-twitter"></i>
+            </button>
+
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+                <i class="fab fa-github"></i>
+            </button>
+        </div>
+    </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <div class="container p-4 mt-3">
+    <form action="/login" method="POST">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="emale">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="Password">
+        </div>
+        <a class="btn btn-primary" href="/signup">Create an account</a>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div> --}}

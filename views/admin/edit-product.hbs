@@ -1,0 +1,42 @@
+<div class="container mt-5">
+
+    <form action="/admin/edit-product/{{product._id}}" method="POST" role="form" enctype="multipart/form-data">
+        <!-- Name input -->
+        <div class="form-outline mb-4">
+            <input type="text" id="form4Example1" class="form-control" name="name" required value="{{product.name}}"/>
+            <label class="form-label" for="form4Example1">Name</label>
+        </div>
+
+        <!-- Model input -->
+        <div class="form-outline mb-4">
+            <input type="text" id="form4Example2" class="form-control" name="Categary" required value="{{product.Categary}}"/>
+            <label class="form-label" for="form4Example2">Categary</label>
+        </div>
+
+        <!-- Message input -->
+        <div class="form-outline mb-4">
+            <input type="number" id="form4Example2" class="form-control" name="Price" required value="{{product.Price}}"/>
+            <label class="form-label" for="form4Example2">Price</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <input type="text" id="form4Example2" class="form-control" name="Description" required value="{{product.Description}}"/>
+            <label class="form-label" for="form4Example2">Description</label>
+        </div>
+
+        <div class="mb-3">
+            <img src="/product-images/{{product._id}}.jpg" alt="img" style="width: 100px; height:auto;" id="imgView">
+            <input class="form-control" type="file" id="formFile" name="image" onchange="viewImage(event)">
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Add to list</button>
+    </form>
+
+</div>
+
+<script>
+    function viewImage(event){
+        document.getElementById('imgView').src = URL.createObjectURL(event.target.files[0])
+    }
+</script>

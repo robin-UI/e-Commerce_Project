@@ -1,0 +1,36 @@
+<div class="container mt-5">
+
+    <form action="add-product" method="POST" role="form" enctype="multipart/form-data">
+        <!-- Name input -->
+        <div class="form-outline mb-4">
+            <input type="text" id="form4Example1" class="form-control" name="name" required />
+            <label class="form-label" for="form4Example1">Name</label>
+        </div>
+
+        <!-- Model input -->
+        <div class="form-outline mb-4">
+            <input type="text" id="form4Example2" class="form-control" name="Categary" required />
+            <label class="form-label" for="form4Example2">Categary</label>
+        </div>
+
+        <!-- Message input -->
+        <div class="form-outline mb-4">
+            <input type="number" id="form4Example2" class="form-control" name="Price" required />
+            <label class="form-label" for="form4Example2">Price</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <input type="text" id="form4Example2" class="form-control" name="Description" required />
+            <label class="form-label" for="form4Example2">Description</label>
+        </div>
+
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Image</label>
+            <input class="form-control" type="file" id="formFile" name="image">
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Add to list</button>
+    </form>
+
+</div>

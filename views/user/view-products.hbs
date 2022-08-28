@@ -1,0 +1,26 @@
+<section>
+    <div class="container mt-5">
+        <div class="row">
+
+            {{#each products}}
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                        <img class="img-fluid" style=" height: 250px" src="/product-images/{{this._id}}.jpg" alt="">
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.Name}}</h5>
+                        <p class="card-text">{{this.Description}}</p>
+                        <button onclick="addToCart('{{this._id}}')" class="btn btn-primary">Add-to-Cart</button>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+</section>
+
